@@ -6,8 +6,9 @@ import DrinkerPage from "./client/DrinkerPage";
 import BarPage from "./client/BarPage";
 import ManufacturerPage from "./client/ManufacturerPage";
 import SQLInterface from "./client/SQLInterface";
-import { BrowserRouter as Router, Route } from 'react-router-dom';
 import BartenderPage from "./client/BartenderPage";
+
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 
 class App extends Component {
   render() {
@@ -19,11 +20,9 @@ class App extends Component {
                 <Route path="/drinker/:drinkerName" component={DrinkerPage} />
                 <Route path="/bar/:barName" component={BarPage} />
                 <Route path="/manufacturer/:manufacturerName" component={ManufacturerPage} />
-                {/*<Route path="/bar/:bartenderName" component={BartenderPage} />*/}
+                <Route path="/bartenders" component={BartenderPage} />
             </div>
         </Router>
-
-
     );
   }
 }

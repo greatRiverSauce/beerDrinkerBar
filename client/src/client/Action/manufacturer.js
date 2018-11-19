@@ -12,7 +12,7 @@ export const setRegionsLikeHighest = regionsLikeHighest => ({
 
 export function getSaleHighest(manufacturerName) {
     return (dispatch) => {
-        fetch("http://localhost:5000/manufacturer/" + manufacturerName)
+        fetch(`http://localhost:5000/manufacturer/${manufacturerName}/regions/sale`)
             .then(res => res.json())
             .then(regions => {
                 dispatch(setRegions(regions));
@@ -20,9 +20,9 @@ export function getSaleHighest(manufacturerName) {
     }
 }
 
-export function getLikeHighest() {
+export function getLikeHighest(manufacturerName) {
     return (dispatch) => {
-        fetch("http://localhost:5000/manufacturer")
+        fetch(`http://localhost:5000/manufacturer/${manufacturerName}/regions/likes`)
             .then(res => res.json())
             .then(regions => {
                 dispatch(setRegionsLikeHighest(regions));
