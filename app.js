@@ -1,6 +1,7 @@
 
 const express = require('express');
 const app = express();
+const path = require('path');
 const bodyParser = require('body-parser');
 const cors = require('cors');
 const mysql = require('mysql');
@@ -14,7 +15,8 @@ const connection = mysql.createConnection({
 
 const port = process.env.PORT || 5000;
 
-app.use(express.static('public'));
+// Serve static files from the React app
+app.use(express.static(path.join(__dirname, 'client/build/index.html')));
 app.use(bodyParser.json());
 
 app.listen(port, function() {
