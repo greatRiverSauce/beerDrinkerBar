@@ -1,13 +1,9 @@
 {
-  "name": "beer",
+  "name": "client",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "body-parser": "^1.18.3",
     "bootstrap": "^3.3.7",
-    "cors": "^2.8.5",
-    "express": "^4.16.4",
-    "mysql": "^2.16.0",
     "react": "^16.6.3",
     "react-bootstrap": "^0.32.4",
     "react-dom": "^16.6.3",
@@ -17,8 +13,7 @@
     "react-select": "^2.1.1",
     "recharts": "^1.4.1",
     "redux": "^4.0.1",
-    "redux-thunk": "^2.3.0",
-    "seamless-immutable": "^7.1.4"
+    "redux-thunk": "^2.3.0"
   },
   "scripts": {
     "start": "react-scripts start",

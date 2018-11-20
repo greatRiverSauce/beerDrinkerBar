@@ -1,12 +1,11 @@
 import React, { Component } from 'react';
-import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
-import BeerPage from "./client/BeerPage";
-import DrinkerPage from "./client/DrinkerPage";
-import BarPage from "./client/BarPage";
-import ManufacturerPage from "./client/ManufacturerPage";
-import SQLInterface from "./client/SQLInterface";
-import BartenderPage from "./client/BartenderPage";
+import BeerPage from "./Page/BeerPage";
+import DrinkerPage from "./Page/DrinkerPage";
+import BarPage from "./Page/BarPage";
+import ManufacturerPage from "./Page/ManufacturerPage";
+import SQLInterface from "./Page/SQLInterface";
+import BartenderPage from "./Page/BartenderPage";
 
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 
