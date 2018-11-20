@@ -89,7 +89,8 @@ class BartenderPage extends Component {
                             onChange={(e) => this.setState({bartenderName: e.value})}
                             options={[
                                 {label: "Gunner Coleman", value: "Gunner Coleman"},
-                                {label: "Bronson Guzman", value: "Bronson Guzman"},
+                                {label: "Kaiden Vang", value: "Kaiden Vang"},
+                                {label: "Mathew Savage", value: "Mathew Savage"},
                             ]}
                         />
                         <Select
@@ -98,7 +99,6 @@ class BartenderPage extends Component {
                             options={[
                                 {label: "Yahooz Bar & Char", value: "Yahooz Bar & Char"},
                                 {label: "Excalibur", value: "Excalibur"},
-                                {label: "Latin American Social Club", value: "Latin American Social Club"},
                                 {label: "Arena Sports Bar & Grill", value: "Arena Sports Bar & Grill"},
                             ]}
                         />
