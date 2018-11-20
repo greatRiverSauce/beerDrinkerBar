@@ -19,7 +19,7 @@ export const setBars = (day, bars) => ({
 
 export function getSpenders(barName) {
     return (dispatch) => {
-        fetch(`http://localhost:5000/bar/${barName}/drinkers`)
+        fetch(`https://salty-sierra-97268.herokuapp.com/bar/${barName}/drinkers`)
             .then(res => res.json())
             .then(spenders => {
                 dispatch(setSpenders(spenders));
@@ -57,7 +57,7 @@ function getDayName(day) {
 export function getBrands(day, barName) {
     const dayName = getDayName(day);
     return (dispatch) => {
-        fetch(`http://localhost:5000/bar/${barName}/beer/${day}`)
+        fetch(`https://salty-sierra-97268.herokuapp.com/bar/${barName}/beer/${day}`)
             .then(res => res.json())
             .then(brands => {
                 dispatch(setBrands(dayName, brands));
@@ -68,7 +68,7 @@ export function getBrands(day, barName) {
 export function getBars(day, beerName) {
     const dayName = getDayName(day);
     return (dispatch) => {
-        fetch(`http://localhost:5000/bar/${beerName}/${day}`)
+        fetch(`https://salty-sierra-97268.herokuapp.com/bar/${beerName}/${day}`)
             .then(res => res.json())
             .then(bars => {
                 dispatch(setBars(dayName, bars));

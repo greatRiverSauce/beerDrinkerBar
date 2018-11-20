@@ -11,7 +11,7 @@ export const setRankings = rankings => ({
 
 export function getTransactions (barName, bartenderName) {
     return (dispatch) => {
-        fetch(`http://localhost:5000/bar/${barName}/${bartenderName}/shifts/beer`)
+        fetch(`https://salty-sierra-97268.herokuapp.com/bar/${barName}/${bartenderName}/shifts/beer`)
             .then(res => res.json())
             .then(transactions => {
                 dispatch(setTransactions(transactions));
@@ -21,7 +21,7 @@ export function getTransactions (barName, bartenderName) {
 
 export function getRankings (barName, shiftName, dayName) {
     return (dispatch) => {
-        fetch(`http://localhost:5000/bartender/ranking/${barName}/${shiftName}/${dayName}`)
+        fetch(`https://salty-sierra-97268.herokuapp.com/bartender/ranking/${barName}/${shiftName}/${dayName}`)
             .then(res => res.json())
             .then(rankings => {
                 console.log(rankings);

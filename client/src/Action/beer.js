@@ -16,7 +16,7 @@ export const setTimes = (times) => ({
 
 export function getDrinkers(beerName) {
     return (dispatch) => {
-        fetch(`http://localhost:5000/beer/${beerName}/drinkers`)
+        fetch(`https://salty-sierra-97268.herokuapp.com/beer/${beerName}/drinkers`)
             .then(res => res.json())
             .then(drinkers => {
                 dispatch(setDrinkers(drinkers));
@@ -26,7 +26,7 @@ export function getDrinkers(beerName) {
 
 export function getBars(beerName) {
     return (dispatch) => {
-        fetch(`http://localhost:5000/beer/${beerName}/bars`)
+        fetch(`https://salty-sierra-97268.herokuapp.com/beer/${beerName}/bars`)
             .then(res => res.json())
             .then(bars => {
                 dispatch(setBars(bars));
@@ -36,7 +36,7 @@ export function getBars(beerName) {
 
 export function getTimes(beerName) {
     return (dispatch) => {
-        fetch(`http://localhost:5000/beer/${beerName}/times`)
+        fetch(`https://salty-sierra-97268.herokuapp.com/beer/${beerName}/times`)
             .then(res => res.json())
             .then(times => {
                 dispatch(setTimes(times));

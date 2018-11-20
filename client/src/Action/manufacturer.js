@@ -12,7 +12,7 @@ export const setRegionsLikeHighest = regionsLikeHighest => ({
 
 export function getSaleHighest(manufacturerName) {
     return (dispatch) => {
-        fetch(`http://localhost:5000/manufacturer/${manufacturerName}/regions/sale`)
+        fetch(`https://salty-sierra-97268.herokuapp.com/manufacturer/${manufacturerName}/regions/sale`)
             .then(res => res.json())
             .then(regions => {
                 dispatch(setRegions(regions));
@@ -22,7 +22,7 @@ export function getSaleHighest(manufacturerName) {
 
 export function getLikeHighest(manufacturerName) {
     return (dispatch) => {
-        fetch(`http://localhost:5000/manufacturer/${manufacturerName}/regions/likes`)
+        fetch(`https://salty-sierra-97268.herokuapp.com/manufacturer/${manufacturerName}/regions/likes`)
             .then(res => res.json())
             .then(regions => {
                 dispatch(setRegionsLikeHighest(regions));

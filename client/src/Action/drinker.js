@@ -27,7 +27,7 @@ export const setSpending = (month, spending) => ({
 
 export function getDrinkers(drinkerName) {
     return (dispatch) => {
-        fetch("http://localhost:5000/drinkers/" + drinkerName + "transactions")
+        fetch("https://salty-sierra-97268.herokuapp.com/drinkers/" + drinkerName + "transactions")
             .then(res => res.json())
             .then(drinkers => {
                 dispatch(setDrinkers(drinkers));
@@ -36,7 +36,7 @@ export function getDrinkers(drinkerName) {
 }
 export function getBeers(drinkerName) {
     return (dispatch) => {
-        fetch(`http://localhost:5000/drinkers/${drinkerName}/beers`)
+        fetch(`https://salty-sierra-97268.herokuapp.com/drinkers/${drinkerName}/beers`)
             .then(res => res.json())
             .then(beers => {
                 dispatch(setBeers(beers));
@@ -89,7 +89,7 @@ function getMonthName(month) {
 export function getSpending(drinkerName, month) {
     const monthName = getMonthName(month);
     return (dispatch) => {
-        fetch(`http://localhost:5000/drinkers/${drinkerName}/${month}/spending`)
+        fetch(`https://salty-sierra-97268.herokuapp.com/drinkers/${drinkerName}/${month}/spending`)
             .then(res => res.json())
             .then(spending => {
                 dispatch(setSpending(monthName, spending));
@@ -100,7 +100,7 @@ export function getSpending(drinkerName, month) {
 export function getTransactions(drinkerName, month) {
     const monthName = getMonthName(month);
     return (dispatch) => {
-        fetch(`http://localhost:5000/drinkers/${drinkerName}/${month}/transactions`)
+        fetch(`https://salty-sierra-97268.herokuapp.com/drinkers/${drinkerName}/${month}/transactions`)
             .then(res => res.json())
             .then(transactions => {
                 dispatch(setTransactions(monthName, transactions));
