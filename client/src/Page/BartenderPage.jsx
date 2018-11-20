@@ -112,13 +112,14 @@ class BartenderPage extends Component {
                     </Panel.Heading>
                     <Panel.Body>
                         <Select
-                            defaultValue={{label: "Gunner Coleman", value: "Gunner Coleman"}}
+                            defaultValue={{label: "Excalibur", value: "Excalibur"}}
                             onChange={(e) => this.setState({barNameRank: e.value})}
                             options={[
-                                {label: "Gunner Coleman", value: "Gunner Coleman"},
-                                {label: "Lorelei Lang", value: "Lorelei Lang"},
-                                {label: "Bronson Guzman", value: "Bronson Guzman"},
-                                {label: "Camilla Lyons", value: "Camilla Lyons"},
+                                {label: "Excalibur", value: "Excalibur"},
+                                {label: "Yahooz Bar & Char", value: "Yahooz Bar & Char"},
+                                {label: "Country Palace", value: "Country Palace"},
+                                {label: "Trapp", value: "Trapp"},
+                                {label: "Shawdows", value: "Shawdows"},
                             ]}
                         />
                         <Select
