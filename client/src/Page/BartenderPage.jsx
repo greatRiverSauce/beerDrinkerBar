@@ -1,7 +1,7 @@
 import React, {Component} from "react";
 import {ComposedChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend,
 } from "recharts";
-import {Row, Col, Panel, DropdownButton, MenuItem, Table} from "react-bootstrap";
+import {Row, Col, Panel, Table} from "react-bootstrap";
 import {getTransactions, getRankings} from '../Action/bartender';
 import {bindActionCreators} from "redux";
 import {connect} from "react-redux";
@@ -12,7 +12,8 @@ class BartenderPage extends Component {
     state={
         bartenderName: "Gunner Coleman",
         barName: "Yahooz Bar & Char",
-        barNameRank: "Yahooz Bar & Char",
+
+        barNameRank: "Excalibur",
         shiftName: "Night",
         day: "Monday",
 
@@ -88,9 +89,7 @@ class BartenderPage extends Component {
                             onChange={(e) => this.setState({bartenderName: e.value})}
                             options={[
                                 {label: "Gunner Coleman", value: "Gunner Coleman"},
-                                {label: "Lorelei Lang", value: "Lorelei Lang"},
                                 {label: "Bronson Guzman", value: "Bronson Guzman"},
-                                {label: "Camilla Lyons", value: "Camilla Lyons"},
                             ]}
                         />
                         <Select
@@ -98,9 +97,9 @@ class BartenderPage extends Component {
                             onChange={(e) => this.setState({barName: e.value})}
                             options={[
                                 {label: "Yahooz Bar & Char", value: "Yahooz Bar & Char"},
+                                {label: "Excalibur", value: "Excalibur"},
                                 {label: "Latin American Social Club", value: "Latin American Social Club"},
                                 {label: "Arena Sports Bar & Grill", value: "Arena Sports Bar & Grill"},
-                                {label: "Dorido's Restaurant & Lounge",value: "Dorido's Restaurant & Lounge"}
                             ]}
                         />
                         {this.renderTable()}
@@ -123,7 +122,7 @@ class BartenderPage extends Component {
                             ]}
                         />
                         <Select
-                            defaultValue={{label: "Afternoon", value: "Afternoon"}}
+                            defaultValue={{label: "Night", value: "Night"}}
                             onChange={(e) => this.setState({shiftName: e.value})}
                             options={[
                                 {label: "Afternoon", value: "Afternoon"},
@@ -144,7 +143,7 @@ class BartenderPage extends Component {
                                 {label: "Sunday",value: "Sunday"},
                             ]}
                         />
-                        <ComposedChart layout="vertical" width={600} height={400} data={this.props.rankings}
+                        <ComposedChart layout="vertical" width={600} height={400} data={this.props.rankings.slice(0, 10)}
                                        margin={{top: 20, right: 20, bottom: 20, left: 20}}>
                             <CartesianGrid stroke='#f5f5f5'/>
                             <XAxis type="number"/>

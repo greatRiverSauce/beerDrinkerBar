@@ -1,5 +1,6 @@
 
 const INITIAL_STATE = {
+    allDrinkers:[],
     drinkers: [],
     curDrinker: "",
     beers:[],
@@ -50,6 +51,9 @@ const drinker = (state = INITIAL_STATE, action) => {
             break;
         case 'SET_SPENDING':
             newState.spending[action.month] = action.spending;
+            break;
+        case 'SET_ALL_DRINKERS':
+            newState.allDrinkers = action.allDrinkers;
             break;
         default:
             return state;

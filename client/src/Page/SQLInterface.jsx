@@ -55,7 +55,7 @@ class SQLInterface extends Component {
                                 </InputGroup.Button>
                             </InputGroup>
                         </FormGroup>
-                        {this.props.data.length !== 0 ? this.renderTable() : <h2>Please write a valid sql</h2>}
+                        {this.props.data.length !== 0 ? this.renderTable() : <h2>Please enter a valid sql</h2>}
                     </Col>
                 </Row>
 

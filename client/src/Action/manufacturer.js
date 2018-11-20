@@ -8,6 +8,20 @@ export const setRegionsLikeHighest = regionsLikeHighest => ({
     regionsLikeHighest
 });
 
+export const setManu = manus => ({
+    type: 'SET_MANU',
+    manus
+});
+
+export function getManu() {
+    return (dispatch) => {
+        fetch(`https://salty-sierra-97268.herokuapp.com/manufacturers/getAll`)
+            .then(res => res.json())
+            .then(manus => {
+                dispatch(setManu(manus));
+            });
+    }
+}
 
 
 export function getSaleHighest(manufacturerName) {

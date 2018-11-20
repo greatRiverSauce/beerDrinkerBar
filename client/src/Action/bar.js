@@ -17,6 +17,11 @@ export const setBars = (day, bars) => ({
     bars
 });
 
+export const setAllBars = (allBars) => ({
+    type: 'SET_ALL_BARS',
+    allBars
+});
+
 export function getSpenders(barName) {
     return (dispatch) => {
         fetch(`https://salty-sierra-97268.herokuapp.com/bar/${barName}/drinkers`)
@@ -72,6 +77,16 @@ export function getBars(day, beerName) {
             .then(res => res.json())
             .then(bars => {
                 dispatch(setBars(dayName, bars));
+            });
+    }
+}
+
+export function getAllBars() {
+    return (dispatch) => {
+        fetch(`https://salty-sierra-97268.herokuapp.com/bars/getAll`)
+            .then(res => res.json())
+            .then(allBars => {
+                dispatch(setAllBars(allBars));
             });
     }
 }

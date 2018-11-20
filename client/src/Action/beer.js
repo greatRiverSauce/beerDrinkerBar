@@ -14,6 +14,11 @@ export const setTimes = (times) => ({
     times
 });
 
+export const setAllBeers = allBeers => ({
+    type: 'SET_ALL_BEERS',
+    allBeers
+});
+
 export function getDrinkers(beerName) {
     return (dispatch) => {
         fetch(`https://salty-sierra-97268.herokuapp.com/beer/${beerName}/drinkers`)
@@ -40,6 +45,17 @@ export function getTimes(beerName) {
             .then(res => res.json())
             .then(times => {
                 dispatch(setTimes(times));
+            });
+    }
+}
+
+export function getAllBeers() {
+    return (dispatch) => {
+        fetch(`https://salty-sierra-97268.herokuapp.com/beers/getAll`)
+            .then(res => res.json())
+            .then(allBeers => {
+                console.log(allBeers);
+                dispatch(setAllBeers(allBeers));
             });
     }
 }

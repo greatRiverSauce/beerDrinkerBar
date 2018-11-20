@@ -2,6 +2,7 @@
 const INITIAL_STATE = {
     regionsSaleHighest: [],
     regionsLikeHighest: [],
+    manus:[]
 };
 
 const manufacturer = (state = INITIAL_STATE, action) => {
@@ -12,6 +13,9 @@ const manufacturer = (state = INITIAL_STATE, action) => {
             return newState;
         case 'SET_REGIONS_LIKE_HIGHEST':
             newState.regionsLikeHighest = action.regionsLikeHighest;
+            return newState;
+        case 'SET_MANU':
+            newState.manus = action.manus;
             return newState;
         default:
             return state;

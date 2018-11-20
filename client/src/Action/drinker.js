@@ -25,12 +25,27 @@ export const setSpending = (month, spending) => ({
     spending
 })
 
+export const setAllDrinkers = (allDrinkers) => ({
+    type: 'SET_ALL_DRINKERS',
+    allDrinkers
+})
+
 export function getDrinkers(drinkerName) {
     return (dispatch) => {
         fetch("https://salty-sierra-97268.herokuapp.com/drinkers/" + drinkerName + "transactions")
             .then(res => res.json())
             .then(drinkers => {
                 dispatch(setDrinkers(drinkers));
+            });
+    }
+}
+
+export function getAllDrinkers(drinkerName) {
+    return (dispatch) => {
+        fetch("https://salty-sierra-97268.herokuapp.com/drinkers/getAll")
+            .then(res => res.json())
+            .then(allDrinkers => {
+                dispatch(setAllDrinkers(allDrinkers));
             });
     }
 }

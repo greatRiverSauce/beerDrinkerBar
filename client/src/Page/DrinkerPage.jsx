@@ -61,61 +61,100 @@ class DrinkerPage extends Component {
             <Row>
                 <Col md={10} mdOffset={1}>
                     <Row>
-                        <Col md={12}>
+                        <Col md={10} mdOffset={1}>
                             <Panel bsStyle="primary">
                                 <Panel.Heading>
                                     <Panel.Title componentClass="h3">
-                                        Monthly Transactions/Spends in Different Bars
+                                        Monthly Spends in Different Bars
                                     </Panel.Title>
                                 </Panel.Heading>
                                 <Panel.Body>
                                     <Tabs defaultActiveKey={1} id="uncontrolled-tab-example">
                                         <Tab eventKey={1} title="Jan">
                                             {this.renderMonthlySpending(jan)}
-                                            {this.renderMonthlyTransctions(janTransactions)}
                                         </Tab>
                                         <Tab eventKey={2} title="Feb">
                                             {this.renderMonthlySpending(feb)}
-                                            {this.renderMonthlyTransctions(febTransactions)}
                                         </Tab>
                                         <Tab eventKey={3} title="Mar">
                                             {this.renderMonthlySpending(mar)}
-                                            {this.renderMonthlyTransctions(marTransactions)}
                                         </Tab>
                                         <Tab eventKey={4} title="Apl">
                                             {this.renderMonthlySpending(apl)}
-                                            {this.renderMonthlyTransctions(aplTransactions)}
                                         </Tab>
                                         <Tab eventKey={5} title="May">
                                             {this.renderMonthlySpending(may)}
-                                            {this.renderMonthlyTransctions(mayTransactions)}
                                         </Tab>
                                         <Tab eventKey={6} title="Jun">
                                             {this.renderMonthlySpending(jun)}
-                                            {this.renderMonthlyTransctions(junTransactions)}
                                         </Tab>
                                         <Tab eventKey={7} title="Jul">
                                             {this.renderMonthlySpending(jul)}
-                                            {this.renderMonthlyTransctions(julTransactions)}
                                         </Tab>
                                         <Tab eventKey={8} title="Aug">
                                             {this.renderMonthlySpending(aug)}
-                                            {this.renderMonthlyTransctions(augTransactions)}
                                         </Tab>
                                         <Tab eventKey={9} title="Sep">
                                             {this.renderMonthlySpending(sep)}
-                                            {this.renderMonthlyTransctions(sepTransactions)}
                                         </Tab>
                                         <Tab eventKey={10} title="Oct">
                                             {this.renderMonthlySpending(oct)}
-                                            {this.renderMonthlyTransctions(octTransactions)}
                                         </Tab>
                                         <Tab eventKey={11} title="Nov">
                                             {this.renderMonthlySpending(nov)}
-                                            {this.renderMonthlyTransctions(novTransactions)}
                                         </Tab>
                                         <Tab eventKey={12} title="Dec">
                                             {this.renderMonthlySpending(dec)}
+                                        </Tab>
+                                    </Tabs>
+                                </Panel.Body>
+                            </Panel>
+                        </Col>
+                    </Row>
+                    <Row>
+                        <Col md={10} mdOffset={1}>
+                            <Panel bsStyle="primary">
+                                <Panel.Heading>
+                                    <Panel.Title componentClass="h3">
+                                        Monthly Transactions in Different Bars
+                                    </Panel.Title>
+                                </Panel.Heading>
+                                <Panel.Body>
+                                    <Tabs defaultActiveKey={1} id="uncontrolled-tab-example">
+                                        <Tab eventKey={1} title="Jan">
+                                            {this.renderMonthlyTransctions(janTransactions)}
+                                        </Tab>
+                                        <Tab eventKey={2} title="Feb">
+                                            {this.renderMonthlyTransctions(febTransactions)}
+                                        </Tab>
+                                        <Tab eventKey={3} title="Mar">
+                                            {this.renderMonthlyTransctions(marTransactions)}
+                                        </Tab>
+                                        <Tab eventKey={4} title="Apl">
+                                            {this.renderMonthlyTransctions(aplTransactions)}
+                                        </Tab>
+                                        <Tab eventKey={5} title="May">
+                                            {this.renderMonthlyTransctions(mayTransactions)}
+                                        </Tab>
+                                        <Tab eventKey={6} title="Jun">
+                                            {this.renderMonthlyTransctions(junTransactions)}
+                                        </Tab>
+                                        <Tab eventKey={7} title="Jul">
+                                            {this.renderMonthlyTransctions(julTransactions)}
+                                        </Tab>
+                                        <Tab eventKey={8} title="Aug">
+                                            {this.renderMonthlyTransctions(augTransactions)}
+                                        </Tab>
+                                        <Tab eventKey={9} title="Sep">
+                                            {this.renderMonthlyTransctions(sepTransactions)}
+                                        </Tab>
+                                        <Tab eventKey={10} title="Oct">
+                                            {this.renderMonthlyTransctions(octTransactions)}
+                                        </Tab>
+                                        <Tab eventKey={11} title="Nov">
+                                            {this.renderMonthlyTransctions(novTransactions)}
+                                        </Tab>
+                                        <Tab eventKey={12} title="Dec">
                                             {this.renderMonthlyTransctions(decTransactions)}
                                         </Tab>
                                     </Tabs>
@@ -124,7 +163,7 @@ class DrinkerPage extends Component {
                         </Col>
                     </Row>
                     <Row>
-                        <Col md={5}>
+                        <Col md={10} mdOffset={1}>
                             <Panel bsStyle="primary">
                                 <Panel.Heading>
                                     <Panel.Title componentClass="h3">Top 10 Beers ordered the most</Panel.Title>

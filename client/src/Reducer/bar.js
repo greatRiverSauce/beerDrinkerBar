@@ -18,7 +18,8 @@ const INITIAL_STATE = {
         fri:[],
         sat:[],
         sun:[]
-    }
+    },
+    allBars:[],
 };
 
 const bar = (state = INITIAL_STATE, action) => {
@@ -32,6 +33,9 @@ const bar = (state = INITIAL_STATE, action) => {
             break;
         case 'SET_BARS':
             newState.bars[action.day] = action.bars;
+            break;
+        case 'SET_ALL_BARS':
+            newState.allBars = action.allBars;
             break;
         default:
             return state;
