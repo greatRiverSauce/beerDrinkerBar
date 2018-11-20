@@ -6,7 +6,7 @@ export const setData = data => ({
 
 export function getData(sql) {
     return (dispatch) => {
-        fetch(`http://localhost:5000/data/${sql}`)
+        fetch(`https://salty-sierra-97268.herokuapp.com/data/${sql}`)
             .then(res => res.json())
             .then(data => {
                 dispatch(setData(data));
